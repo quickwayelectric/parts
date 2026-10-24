@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QW Part Search</title>
+    <link rel="stylesheet" href="resources/styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+<body>
+    <div>
+        <div class="top-container">
+            <header>
+                <h1>Quick<span>Parts</span> by
+                    <img id="logo" src="resources/images/Quickway.png">
+                </h1>
+                <div class="subtitle-text">
+                    <span><h2>Sage Part List Generator</h2></span>
+                    <span id="updated-date"></span>
+                </div>
+            </header>
+        </div>
+        <section class="bottom-container">
+            <div class="form">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="       Search" class="tabbable-when-modal-hidden">
+                </div>
+                <ul id="searchList" class="list">
+                </ul>
+                <div class="buttons">
+                    <button id="custom-part" tabindex="-1">Add Custom Part</button>
+                    <div id="table-buttons" class="hidden">
+                        <button id="copy-parts" tabindex="-1">Copy Part Numbers for Sage</button>
+                        <button id="copy-table-for-email" tabindex="-1">Copy Data for Email</button>
+                        <button id="copy-table-for-excel" tabindex="-1">Copy Data for Excel</button>
+                        <button id="clear-table" tabindex="-1">Clear Table</button>
+                    </div>
+                </div>
+                <div id="myList-container" class="hidden">
+                    <table id="myTable">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+        <div id="modal-container" class="hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times</span>
+                <ul>
+                    <li class="modal-li modal-description">
+                        <p>Enter the data for your custom part here. Please fill in as much information as possible.</p>
+                    </li>
+                    <li><label>Manufacturer</label><input type="text" id="custom-manufacturer" class="modal-li tabbable-when-modal-visible"></li>
+                    <li><label>Manuf. Part#</label><input type="text" id="custom-part-number" class="modal-li tabbable-when-modal-visible"></li>
+                    <li><label>*Part Desc</label><input type="text" id="custom-part-description" class="modal-li tabbable-when-modal-visible"></li>
+                    <li><label>*Units</label><input type="text" id="custom-units" class="modal-li tabbable-when-modal-visible"></li>
+                    <li><label>*Quantity</label><input type="number" id="custom-quantity" class="modal-li tabbable-when-modal-visible"></li>
+                    <li class="modal-li"><button id="submit-modal" class="tabbable-when-modal-visible">Submit</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="dummy" class="hidden"></div>
+    <footer id="footer">
+        <a href="http://www.quickwayelectric.com" target="_blank">&#169 Quick Way Electrical (1999) Ltd.</a>
+    </footer>
+    <script src="resources/scripts/partsdata.js"></script>
+    <script src="resources/scripts/index.js"></script>
+</body>
+</html>
